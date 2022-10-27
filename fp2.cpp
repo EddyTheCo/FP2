@@ -34,8 +34,8 @@ namespace network {
 					});
 
 			targets_ = torch::from_blob(data_buffer_TA.data(),{NitemsTA},torch::dtype(torch::kInt8)).clone();
-file_image.close();
-file_target.close();
+			file_image.close();
+			file_target.close();
 
 		}
 		torch::data::Example<> FP2::get(size_t index)
