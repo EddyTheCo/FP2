@@ -18,7 +18,7 @@ endif()
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_library(FP2 FP2.cpp include/FP2.hpp)
+add_library(FP2 fp2.cpp include/fp2.hpp)
 
 
 find_package(Torch REQUIRED)
