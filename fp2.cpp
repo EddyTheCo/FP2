@@ -1,5 +1,5 @@
 #include"custom-datasets/fp2.hpp"
-namespace network {
+namespace custom_models {
 	namespace datasets{
 
 		FP2::FP2(const std::string& root, Mode mode): mode_(mode)

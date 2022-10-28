@@ -4,7 +4,7 @@
 #include <torch/torch.h>
 #include <iostream>
 #include<fstream>
-namespace network {
+namespace custom_models {
 	namespace datasets{
 		/**
 		 * Dataset based on the Featured Proposal [FP2](../../Proposals/FP_2.md)
