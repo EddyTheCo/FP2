@@ -40,7 +40,7 @@ namespace custom_models {
 		}
 		torch::data::Example<> FP2::get(size_t index)
 		{
-			return torch::data::Example(images_[index],targets_[index]);
+			return {images_[index],targets_[index]};
 		}
 		c10::optional<size_t> FP2::size() const
 		{
