@@ -15,6 +15,7 @@ namespace custom_models {
 			file_image.read(reinterpret_cast<char *>(&NitemsIM), sizeof(NitemsIM));
             file_image.read(reinterpret_cast<char *>(&Nnodes), sizeof(Nnodes));
 			file_target.read(reinterpret_cast<char *>(&NitemsTA), sizeof(NitemsTA));
+			file_target.read(reinterpret_cast<char *>(&Nnodes), sizeof(Nnodes));
             file_image.read(reinterpret_cast<char *>(&Nfeatures), sizeof(Nfeatures));
             std::cout<<"n features:"<<(int)Nfeatures<<std::endl;
             std::cout<<"n nodes:"<<(int)Nnodes<<std::endl;
