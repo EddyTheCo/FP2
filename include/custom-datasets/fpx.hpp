@@ -7,16 +7,15 @@
 namespace custom_models {
 	namespace datasets{
 		/**
-		 * Dataset based on the Featured Proposal [FP2](../../Proposals/FP_2.md)
+		 * Dataset based on the Featured Proposal FPX
 		 * Encoding the adjacency list as features.
 		 *
 		 */
-
-		class  FP2 : public torch::data::Dataset<FP2> {
+		class  FPX : public torch::data::Dataset<FPX> {
 			public:
 				enum class Mode { kTrain, kTest };
 
-				explicit FP2(const std::string& root, Mode mode = Mode::kTrain);
+			 explicit FPX(const std::string& root, Mode mode = Mode::kTrain,const std::string name_m="");
 
 				torch::data::Example<> get(size_t index) override;
 
@@ -39,6 +38,16 @@ namespace custom_models {
 				torch::Tensor images_, targets_;
 				Mode mode_;
 		};
+
+		class FP2 :public FPX
+		{
+			 FP2(const std::string& root, Mode mode = Mode::kTrain):FPX(root,mode,"2"){};
+		};
+		class FP3_1 :public FPX
+		{
+			 FP3_1(const std::string& root, Mode mode = Mode::kTrain):FPX(root,mode,"3_1"){};
+		};
+
 
 	};
 };
