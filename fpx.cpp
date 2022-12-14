@@ -5,8 +5,8 @@ namespace custom_models {
 
 		FPX::FPX(const std::string& root, Mode mode,const std::string name): mode_(mode)
 		{
-			auto pathIM=(root+"/FP_"+name+((mode==Mode::kTrain)?"_train_input.bin":"_test_input.bin"));
-			auto pathTA=(root+"/FP_"+name+((mode==Mode::kTrain)?"_train_target.bin":"_test_target.bin"));
+			auto pathIM=(root+"/FP"+name+((mode==Mode::kTrain)?"_train_input.bin":"_test_input.bin"));
+			auto pathTA=(root+"/FP"+name+((mode==Mode::kTrain)?"_train_target.bin":"_test_target.bin"));
 			std::ifstream file_image((pathIM).c_str(),std::ios::in | std::ios::binary);
 			std::ifstream file_target((pathTA).c_str(),std::ios::in | std::ios::binary);
 			TORCH_CHECK(file_image, "Error opening data file at ", pathIM);
