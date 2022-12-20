@@ -41,10 +41,12 @@ namespace custom_models {
 
 		class FP2 :public FPX
 		{
+			public:
 			 FP2(const std::string& root, Mode mode = Mode::kTrain):FPX(root,mode,"2"){};
 		};
 		class FP3_1 :public FPX
 		{
+			public:
 			 FP3_1(const std::string& root, Mode mode = Mode::kTrain):FPX(root,mode,"3_1"){};
 		};
 
